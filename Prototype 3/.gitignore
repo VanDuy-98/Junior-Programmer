@@ -1,0 +1,85 @@
+# This .gitignore file should be placed at the root of your Unity project directory
+# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
+
+# ========== Unity generated folders ========== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# ========== Visual Studio / JetBrains ========== #
+.vscode/
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+
+# Rider specific
+.idea/
+*.sln.iml
+
+# ========== OS generated ========== #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ========== Unity Cache / Collab / Crash Reports ========== #
+sysinfo.txt
+*.stacktrace
+.crash/
+
+# ========== Auto-generated / Build Artifacts ========== #
+*.apk
+*.aab
+*.unitypackage
+*.exe
+*.app
+*.dll
+
+# ========== TextMesh Pro Font Assets ========== #
+*.asset.meta
+
+# ========== Shader Cache ========== #
+*.shadercache
+*.giparams
+*.gi
+
+# ========== Addressables ========== #
+/ServerData/
+*/AssetBundles/
+*/StreamingAssets/aa.meta
+*/StreamingAssets/aa/
+
+# ========== PlasticSCM ========== #
+.ignore
+*.plastic
+plastic.*
+
+# ========== Other build-related folders ========== #
+Builds/
+Build/
+
+# ========== Uncomment if using Unity Cloud Build ========== #
+# /[Cc]ache/
+
+# ========== Uncomment if using Collaborate ========== #
+# /[Cc]ollab/
+
+# ========== Local dev files ========== #
+local*.json
