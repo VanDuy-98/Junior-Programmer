@@ -8195,13 +8195,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110234610}
-    m_Position: {x: 48, y: 72, z: 0}
+    m_Position: {x: 50, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110291376}
-    m_Position: {x: 48, y: 156, z: 0}
+    m_Position: {x: 50, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110275706}
-    m_Position: {x: 48, y: 240, z: 0}
+    m_Position: {x: 50, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110267120}
     m_Position: {x: 360, y: 240, z: 0}
