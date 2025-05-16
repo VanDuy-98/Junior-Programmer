@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour
     {
         chasePlayer();
 
+        // Check enemy fall down 
         if (transform.position.y < -10)
         {
             Destroy(gameObject);

@@ -7,8 +7,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     private GameObject focalPoint;
     public GameObject powerupIndicator;
+    //public GameObject rocketPrefab;
+    //public Transform rocketPoint;
+
     public float speed;
     public bool hasPowerup = false;
+    public bool hasPowerupRocket = false;
     public float powerupStrength = 15f;
     public bool gameOver = false;
 
@@ -30,7 +34,17 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over!");
             gameOver = true;
         }
+
+        //if (Input.GetKeyDown(KeyCode.Space) && hasPowerupRocket)
+        //{
+        //    shoot();
+        //}
     }
+
+    //void shoot()
+    //{
+    //    Instantiate(rocketPrefab, rocketPoint.position, rocketPoint.rotation);
+    //}
 
     void initPowerupIndicator()
     {
@@ -47,6 +61,15 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Powerup"))
         {
+            //string powerupName = other.name;
+
+            //if (powerupName.Contains("Strength"))
+            //{
+            //    SetPowerupStrength();
+            //} else if (powerupName.Contains("Rocket")) {
+            //    hasPowerupRocket = true;
+            //}
+
             hasPowerup = true;
             Destroy(other.gameObject);
             StartCoroutine(PowerupCountdownRoutine());
@@ -58,6 +81,7 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(7);
         hasPowerup = false;
+        hasPowerupRocket = false;
         powerupIndicator.SetActive(false);
     }
 
@@ -65,10 +89,21 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy") && hasPowerup)
         {
+
             Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
 
             enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
         }
+    }
+
+    void SetPowerupStrength()
+    {
+
+    }
+
+    void SetPowerupRocket()
+    {
+
     }
 }
