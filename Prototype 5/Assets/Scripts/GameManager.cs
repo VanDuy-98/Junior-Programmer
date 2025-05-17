@@ -1,21 +1,28 @@
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> targets;
     public TextMeshProUGUI textScore;
+    public TextMeshProUGUI gameOverText;
+    public Button restartButton;
 
     private float spawnRate = 1f;
     private int score;
+    public bool isGameActive;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(SpawnTarget());
+        isGameActive = true;
         score = 0;
+
+        StartCoroutine(SpawnTarget());
         UpdateScore(0);
     }
 
@@ -27,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpawnTarget()
     {
-        while (true)
+        while (isGameActive)
         {
             yield return new WaitForSeconds(spawnRate);
             int indexTarget = Random.Range(0, targets.Count);
@@ -39,5 +46,17 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         textScore.text = "Score: " + score;
+    }
+
+    public void GameOver()
+    {
+        isGameActive = false;
+        gameOverText.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
