@@ -21,6 +21,22 @@ public class PlayerController : MonoBehaviour
         ConstrainPlayerPosition();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("collision with enemy");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
     void MovePlayer()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
