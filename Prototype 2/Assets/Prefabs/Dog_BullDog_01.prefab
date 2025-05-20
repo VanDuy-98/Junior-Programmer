@@ -2794,9 +2794,9 @@ GameObject:
   - component: {fileID: 8952477013373493331}
   - component: {fileID: 7574351646117095697}
   - component: {fileID: 1597152173577370462}
-  - component: {fileID: 4373410722030646651}
   - component: {fileID: 3111788887755838958}
-  - component: {fileID: 7685584905060872378}
+  - component: {fileID: 3799400589464962347}
+  - component: {fileID: 4074756691745320862}
   m_Layer: 0
   m_Name: Dog_BullDog_01
   m_TagString: Untagged
@@ -2891,18 +2891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &4373410722030646651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2986508502707677857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444a9061635dbc84987dfbc9053f3e97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &3111788887755838958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2924,7 +2912,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.21547355, y: 0.2569238, z: 0.41235885}
   m_Center: {x: -0.0032968202, y: 0.09084911, z: 0.019589333}
---- !u!114 &7685584905060872378
+--- !u!114 &3799400589464962347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2933,7 +2921,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2986508502707677857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92e75741e3dc8e94fb43293926b823e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c52ee72091692143869a36cdefe1fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4074756691745320862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2986508502707677857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e62e9a8a22fac478a927ce940e28f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3083020803002107815
